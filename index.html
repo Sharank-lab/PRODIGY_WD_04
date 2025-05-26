@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Portfolio - Web Developer</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fefefe;
+    color: #2c3e50;
+    line-height: 1.6;
+  }
+  header {
+    background: #34495e;
+    color: white;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  main {
+    max-width: 900px;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
+  }
+  /* Home Section */
+  #home {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 3rem;
+    border-bottom: 2px solid #e1e1e1;
+  }
+  #home .photo {
+    flex: 1 1 280px;
+    max-width: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+  }
+  #home .photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  #home .photo:hover {
+    transform: scale(1.05);
+  }
+  #home .intro {
+    flex: 2 1 400px;
+  }
+  #home h2 {
+    font-size: 2.2rem;
+    margin-top: 0;
+    margin-bottom: 0.3rem;
+    color: #2980b9;
+  }
+  #home p {
+    font-size: 1.15rem;
+    color: #555;
+    margin: 0.6rem 0 1.5rem;
+  }
+  #home .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  #home .skill {
+    background: #2980b9;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 6px rgba(41,128,185,0.5);
+    user-select: none;
+    cursor: default;
+    transition: background 0.3s ease;
+  }
+  #home .skill:hover {
+    background: #3498db;
+  }
+
+  /* About Me Section */
+  #about {
+    margin-top: 3rem;
+  }
+  #about h2 {
+    font-size: 2rem;
+    border-left: 6px solid #2980b9;
+    padding-left: 0.5rem;
+    color: #34495e;
+  }
+  #about .section {
+    margin-top: 1.5rem;
+  }
+  #about .section h3 {
+    font-size: 1.3rem;
+    color: #2980b9;
+    margin-bottom: 0.4rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.25rem;
+  }
+  #about .section ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+  }
+  #about .section ul li {
+    margin-bottom: 0.8rem;
+    color: #444;
+  }
+  #about .section ul li strong {
+    color: #34495e;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    #home {
+      flex-direction: column;
+      align-items: center;
+    }
+    #home .intro {
+      text-align: center;
+    }
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #34495e;
+    color: #bdc3c7;
+    font-size: 0.9rem;
+  }
+  footer a {
+    color: #ecf0f1;
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>John Doe - Web Developer</h1>
+</header>
+<main>
+  <section id="home" aria-label="Home Introduction">
+    <div class="photo" aria-label="Professional photo of John Doe">
+      <img src="https://i.pravatar.cc/280?img=12" alt="John Doe smiling professional portrait" />
+    </div>
+    <div class="intro">
+      <h2>Crafting Beautiful, Functional Websites</h2>
+      <p>
+        I’m John, a passionate web developer specialized in building high-quality websites and dynamic user experiences. Skilled in JavaScript, React, HTML5, CSS3, and responsive design.
+      </p>
+      <div class="skills" aria-label="Skills list">
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">TypeScript</div>
+        <div class="skill">Responsive Design</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" aria-label="About Me">
+    <h2>About Me</h2>
+
+    <div class="section" id="background">
+      <h3>Background</h3>
+      <ul>
+        <li>Passionate about crafting seamless web experiences that are both beautiful and functionally robust.</li>
+        <li>Dedicated to continuous learning and staying updated with latest web technologies and trends.</li>
+        <li>Strong problem-solving skills and detail-oriented coding approach.</li>
+      </ul>
+    </div>
+
+    <div class="section" id="education">
+      <h3>Education</h3>
+      <ul>
+        <li><strong>Bachelor of Science in Computer Science</strong>, University of Technology, 2017 - 2021</li>
+        <li><strong>Certified Frontend Developer</strong> – Web Development Bootcamp, 2022</li>
+      </ul>
+    </div>
+
+    <div class="section" id="experience">
+      <h3>Professional Experience</h3>
+      <ul>
+        <li><strong>Frontend Developer</strong> at Creative Solutions Inc. (2021 - Present)
+          <ul>
+            <li>Designed and implemented responsive, user-friendly websites for clients from various industries.</li>
+            <li>Collaborated with design and backend teams to deliver seamless web applications.</li>
+            <li>Optimized websites for maximum speed and scalability.</li>
+          </ul>
+        </li>
+        <li><strong>Web Development Intern</strong> at TechStart Labs (Summer 2020)
+          <ul>
+            <li>Assisted in developing front-end components using React and JavaScript.</li>
+            <li>Performed website testing and debugging to enhance performance and usability.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>© 2024 John Doe &middot; <a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
+</footer>
+</body>
+</html>
+
